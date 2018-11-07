@@ -140,4 +140,10 @@ public class ComplexTest {
         assertFalse(Complex.ZERO.equals(Complex.ONE));
         assertFalse(Complex.ONE.equals(c1));
     }
+
+    @Test
+    void testReal(){
+        assertEquals(Complex.ONE,Complex.real(1));
+        assertNotEquals(Complex.ZERO,Complex.real(2));
+    }
 }
