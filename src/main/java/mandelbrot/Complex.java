@@ -34,7 +34,7 @@ public class Complex {
     /**
      * Zero as a complex number
      */
-    static Complex ZERO = new Complex(0.0, 0);
+    static Complex ZERO = new Complex(0, 0);
 
     /**
      * One as a complex number
@@ -210,7 +210,7 @@ public class Complex {
         if (o == null || getClass() != o.getClass())
             return false;
         Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 0 ||
+        return Helpers.doubleCompare(complex.real, real) == 0 &&
                 Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
     }
 
