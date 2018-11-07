@@ -134,8 +134,10 @@ public class ComplexTest {
 
     @Test
     void testEquals(){
-        assertTrue(Complex.I.equals(Complex.I));
+        Complex c1=new Complex(0,1);
+        assertTrue(Complex.I.equals(c1));
+        assertTrue(c1.equals(Complex.I));
         assertFalse(Complex.ZERO.equals(Complex.ONE));
-
+        assertFalse(Complex.ONE.equals(c1));
     }
 }
