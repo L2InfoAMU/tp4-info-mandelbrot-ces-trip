@@ -167,6 +167,6 @@ public class ComplexTest {
     @Test
     void squaredModulus() {
         assertEquals(two.squaredModulus(), 4);
-        assertEquals(two.squaredModulus(), 6);
+        assertNotEquals(two.squaredModulus(), 6);
     }
 }
