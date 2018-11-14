@@ -155,8 +155,12 @@ public class ComplexTest {
     }
 
     @Test
-    void squaredModulus() {
-        assertEquals(two.squaredModulus(), 4);
-        assertEquals(two.squaredModulus(), 6);
+    void testMultiply(){
+        Complex c1=new Complex(4,0);
+        assertEquals(Complex.ONE.multiply(onePlusI),onePlusI);
+        assertEquals(two.multiply(two),c1);
+        assertEquals(Complex.I.multiply(oneMinusI),onePlusI);
+        assertNotEquals(Complex.ONE.multiply(oneMinusI),Complex.ZERO);
+        assertNotEquals(Complex.I.multiply(Complex.ONE),onePlusI);
     }
 }
