@@ -149,6 +149,8 @@ public class ComplexTest {
 
     @Test
     void testAdd() {
-
+        assertEquals(Complex.ONE.add(Complex.ONE), two);
+        assertEquals(Complex.I.add(Complex.I), twoI);
+        assertNotEquals(Complex.ONE.add(Complex.I), Complex.ZERO);
     }
 }
