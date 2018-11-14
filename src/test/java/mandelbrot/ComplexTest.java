@@ -179,7 +179,9 @@ public class ComplexTest {
 
     @Test
     void testScale() {
-
+        assertEquals(Complex.ONE.scale(2),two);
+        assertEquals(Complex.I.scale(-1),minusI);
+        assertNotEquals(onePlusI.scale(-1),oneMinusI);
     }
 
     @Test
