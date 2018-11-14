@@ -181,4 +181,13 @@ public class ComplexTest {
     void testScale() {
 
     }
+
+        @Test
+    void TestModulus(){
+        assertEquals(Complex.I.modulus(),1);
+        assertEquals(Complex.ONE.modulus(),Complex.I.modulus());
+        assertNotEquals(Complex.I.modulus(),2);
+        assertNotEquals(Complex.ONE.modulus(),onePlusI.modulus());
+        }
+
 }
