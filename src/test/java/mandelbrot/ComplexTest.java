@@ -165,8 +165,20 @@ public class ComplexTest {
     }
 
     @Test
-    void squaredModulus() {
+    void testSquaredModulus() {
         assertEquals(two.squaredModulus(), 4);
         assertNotEquals(two.squaredModulus(), 6);
+    }
+
+
+    @Test
+    void testPow() {
+        assertEquals(Complex.ZERO.pow(10), Complex.ZERO);
+        assertEquals(onePlusI.pow(2), new Complex(8,0));
+    }
+
+    @Test
+    void testScale() {
+
     }
 }
